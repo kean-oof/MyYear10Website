@@ -32,6 +32,8 @@ img {
 .hero-text {
     font-size: 4em;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 /* nice big font on a banner style background */
