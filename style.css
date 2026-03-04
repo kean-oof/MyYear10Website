@@ -41,7 +41,7 @@ img {
     color: white;
     font-size: 2em;
     padding: 0.1em 3em;
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(1, 0, 71);
 }
 
 /* Three column grid with a nice big gap */
@@ -75,7 +75,7 @@ img {
 
 /* Styling for a footer section to take a bit of spcae at the bottom of the page */
 .footer{
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(1, 0, 71);
     color: white;
     text-align: right;
     padding: 3em 3em;
