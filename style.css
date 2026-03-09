@@ -11,7 +11,7 @@ html {
 
 /* reset for images to ensure they ar 100% of the parent container width */
 img {
-    width: 100%;
+    width: 80%;
 }
 
 /* The hero section styling- use your OWN Hero Image URL here */
@@ -49,19 +49,19 @@ img {
 .topic-content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6em;
+    gap: 8em;
     /* bring the whole section in off the sides of the page */
     width: 70%;
     /* top margin of 3em and center right/left */
-    margin: 3em auto;
+    margin: 14em auto;
 }
 
 /* Styling for the individual topic cards rounded edges background color and a drop shadow */
 .topic-card{
     background-color: rgb(148, 148, 148);
     color: white;
-    padding: 1em;
-    border-radius: 0.5em;
+    align-content: center;
+    border-radius: 2em;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -88,6 +88,5 @@ img {
     background-image: url(images/Koenigsegg-Gemera-153139.jpg);
     background-size: cover;
     height: 120vh;
-
 }
 
