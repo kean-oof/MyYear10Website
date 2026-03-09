@@ -12,6 +12,7 @@ html {
 /* reset for images to ensure they ar 100% of the parent container width */
 img {
     width: 80%;
+    
 }
 
 /* The hero section styling- use your OWN Hero Image URL here */
@@ -42,6 +43,7 @@ img {
     color: white;
     font-size: 2em;
     padding: 0.1em 3em;
+    text-align: center;
     background-color: rgb(1, 0, 71);
 }
 
