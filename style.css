@@ -84,3 +84,10 @@ img {
     padding: 3em 3em;
 }
 
+.topic{
+    background-image: url(images/Koenigsegg-Gemera-153139.jpg);
+    background-size: cover;
+    height: 120vh;
+
+}
+
