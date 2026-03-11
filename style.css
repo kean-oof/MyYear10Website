@@ -12,22 +12,24 @@ html {
 /* reset for images to ensure they ar 100% of the parent container width */
 img {
     width: 80%;
-    
+    margin-top: 2em;
 }
 
 /* The hero section styling- use your OWN Hero Image URL here */
 .hero {
-    background-image: url('images/new\ technobanner.jpg');
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    position: relative;
+    background-image: url('images/new\ technobanner.jpg'); /* */
+    height: 40vh; /* */
+    background-size: cover; /* */
+    background-position: center; /* */
+    display: flex; /* */
+    justify-content: center; /* */
+    align-items: center; /* */
+    color: white; /* */
+    
+    /* Add these lines to fix it in place while scrolling */
+    position: sticky;
+    top: 0;
+    z-index: -1; /* This pushes the banner "behind" the other content */
 }
 
 /* BIG text styling for the hero section text */
@@ -45,6 +47,11 @@ img {
     padding: 0.1em 3em;
     text-align: center;
     background-color: rgb(1, 0, 71);
+
+    position: -webkit-sticky; /* For Safari support */
+    position: sticky;
+    top: 0;           /* Sticks to the very top of the viewport */
+    z-index: 100;     /* Ensures it stays on top of the banner text */
 }
 
 /* Three column grid with a nice big gap */
@@ -70,6 +77,12 @@ img {
     border-radius: 2em;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     padding: 20px; /* Optional: adds a little breathing room inside the card */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%; /* Ensures all cards fill the grid row height */
 }
 
 /* Styling for the topic card titles */
@@ -79,6 +92,9 @@ img {
     /* center align text */
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+
+    margin-top: auto; 
+    margin-bottom: 1em;
 }
 
 
