@@ -62,9 +62,14 @@ img {
 .topic-card{
     background-color: rgb(148, 148, 148);
     color: white;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+    justify-content: center; /* This centers content vertically */
     border-radius: 2em;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Optional: adds a little breathing room inside the card */
 }
 
 /* Styling for the topic card titles */
