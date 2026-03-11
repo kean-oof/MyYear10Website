@@ -51,7 +51,7 @@ img {
     position: -webkit-sticky; /* For Safari support */
     position: sticky;
     top: 0;           /* Sticks to the very top of the viewport */
-    z-index: 100;     /* Ensures it stays on top of the banner text */
+    z-index: 1;     /* Ensures it stays on top of the banner text */
 }
 
 /* Three column grid with a nice big gap */
@@ -83,6 +83,8 @@ img {
     align-items: center;
     padding: 20px;
     height: 100%; /* Ensures all cards fill the grid row height */
+    z-index: 0;
+
 }
 
 /* Styling for the topic card titles */
@@ -95,6 +97,7 @@ img {
 
     margin-top: auto; 
     margin-bottom: 1em;
+    z-index: 0;
 }
 
 
