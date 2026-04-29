@@ -117,14 +117,18 @@ img {
 }
 
 /* Make the link behave like a block so the image inside it centers properly */
+/* Specific fix for the link container */
 .topic-card a {
-    display: block;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-/* This ensures the image stays centered within that link */
-.topic-card a img {
-    margin: 2em auto 0 auto; /* Keeps your 2em top margin and centers horizontally */
-    display: block;
+/* Control image sizes so they match regardless of shape */
+.topic-card img {
+    width: auto;      /* Override the 80% width */
+    max-width: 90%;   /* Keep it within the card */
+    height: 200px;    /* Forces all images to the same height */
+    object-fit: contain; /* Prevents squishing/stretching */
+    margin-top: 2em;
 }
