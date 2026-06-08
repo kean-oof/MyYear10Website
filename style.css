@@ -1,161 +1,145 @@
-/* A simple css reset */
-body,
-html {
+/* Base Reset */
+body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    /* The Font Family- Really important!! */
     font-family: Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
+    background-color: #f4f4f9;
 }
 
-/* reset for images to ensure they ar 100% of the parent container width */
 img {
     width: 80%;
     margin-top: 2em;
 }
 
-/* The hero section styling- use your OWN Hero Image URL here */
+/* Hero Section */
 .hero {
-    background-image: url('images/new\ technobanner.jpg'); /* */
-    height: 40vh; /* */
-    background-size: cover; /* */
-    background-position: center; /* */
-    display: flex; /* */
-    justify-content: center; /* */
-    align-items: center; /* */
-    color: white; /* */
-    
-    /* Add these lines to fix it in place while scrolling */
-    position: sticky;
-    top: 0;
-    z-index: -1; /* This pushes the banner "behind" the other content */
+    background-image: url('images/new\ technobanner.jpg');
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-/* BIG text styling for the hero section text */
 .hero-text {
-    font-size: 8em;
+    font-size: 5em;
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
+    text-align: center;
 }
 
 /* ==========================================
-   NEW MENU BAR & BUTTON STYLES
+   TRUE TAB SYSTEM STYLING
    ========================================== */
-.menu-bar {
+.tab-container {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
     display: flex;
     justify-content: center;
-    background-color: #f0f0f0;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu-btn {
+.tab-menu {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.tab-btn {
     background-color: #e0e0e0;
     color: #333;
     border: none;
-    padding: 12px 24px;
-    margin: 0 10px;
+    padding: 15px 30px;
     font-size: 1.1em;
     font-family: Georgia, serif;
     cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: -2px; /* Pull down to snap cleanly to border */
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    margin-right: 5px;
 }
 
-.menu-btn:hover {
+.tab-btn:hover {
     background-color: #d0d0d0;
 }
 
-/* Active state matches your headings exactly */
-.menu-btn.active {
+/* Active tab turns exactly into the header color */
+.tab-btn.active {
     background-color: rgb(1, 0, 71);
     color: white;
     font-weight: bold;
+    border-bottom: 2px solid rgb(1, 0, 71);
 }
 
-/* Utility rule to hide sections */
-.hidden {
-    display: none !important;
+/* Tab Panels Behaviour */
+.portfolio-content {
+    background-image: url('images/Koenigsegg-Gemera-153139.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 60vh;
+    padding-bottom: 5em;
+}
+
+.tab-panel {
+    display: none; /* Hide panels by default */
+}
+
+.tab-panel.active-panel {
+    display: block; /* Show only the active tab panel */
 }
 /* ========================================== */
 
-/* nice big font on a banner style background */
-.topic-title{
+/* Heading Banner */
+.topic-title {
     color: white;
-    font-size: 2em;
-    padding: 0.1em 3em;
+    font-size: 1.8em;
+    padding: 1em;
     text-align: center;
     background-color: rgb(1, 0, 71);
-
-    position: -webkit-sticky; /* For Safari support */
-    position: sticky;
-    top: 55px;       /* Adjusted to stick right below the menu bar */
-    z-index: 1;     /* Ensures it stays on top of the banner text */
 }
 
-/* Three column grid with a nice big gap */
-.topic-content{
+/* Three Column Card Layout */
+.topic-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8em;
-    /* bring the whole section in off the sides of the page */
-    width: 70%;
-    /* top margin of 3em and center right/left */
-    margin: 14em auto;
+    gap: 4em;
+    width: 80%;
+    margin: 4em auto 0 auto;
 }
 
-/* Styling for the individual topic cards rounded edges background color and a drop shadow */
-.topic-card{
+/* Cards */
+.topic-card {
     background-color: rgb(148, 148, 148);
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    
-    justify-content: center; /* This centers content vertically */
-    border-radius: 2em;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px; /* Optional: adds a little breathing room inside the card */
-
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    border-radius: 2em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    height: 100%; /* Ensures all cards fill the grid row height */
-    z-index: 0;
-
+    min-height: 350px;
 }
 
-/* Styling for the topic card titles */
-.topic-card-text{
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    /* center align text */
+.topic-card-text {
+    font-size: 1.3em;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-
-    margin-top: auto; 
-    margin-bottom: 1em;
-    z-index: 0;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
-
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
+/* Footer styling */
+.footer {
     background-color: rgb(1, 0, 71);
     color: white;
     text-align: right;
     font-family: 'Times New Roman', Times, serif;
-    padding: 3em 3em;
-}
-
-.topic{
-    background-image: url(images/Koenigsegg-Gemera-153139.jpg);
-    background-size: cover;
-    height: 120vh;
+    padding: 2em 3em;
 }

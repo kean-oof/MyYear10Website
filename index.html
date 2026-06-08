@@ -7,123 +7,112 @@
     <link rel="stylesheet" href="style.css">
     <title>Kean's Website</title>
 </head>
-<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
 <body>
 
-    <!-- The Hero Section -------------------------------------------------------------------------------------- -->
+    <!-- The Hero Section -->
     <section class="hero">
         <div class="hero-text">Kean's DGT Portfolio</div>
     </section>
 
-    <!-- Navigation Menu Bar --------------------------------------------------------------------------------- -->
-    <div class="menu-bar">
-        <button class="menu-btn active" onclick="showTopic('topic-image')">Images</button>
-        <button class="menu-btn" onclick="showTopic('topic-cs')">Computer Science</button>
-        <button class="menu-btn" onclick="showTopic('topic-3d')">3D Modelling</button>
+    <!-- Tab Selection Menu -->
+    <div class="tab-container">
+        <div class="tab-menu">
+            <button class="tab-btn active" onclick="switchTab(event, 'topic-image')">Image Creation</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic-cs')">Computer Science</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic-3d')">3D Modelling</button>
+        </div>
     </div>
 
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
-    <section id="topic-image" class="topic">
-        <!-- the topic title a big bar with text in it -->
-        <div class="topic-title">
-            <h1>Image Creation Task Submissions</h1>
-        </div>
+    <!-- Tab Content Sections -->
+    <main class="portfolio-content">
         
-        <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/planet.jpg" alt="Picture of a solar system">
-                <h2 class="topic-card-text">A made up solar system</h2>
+        <!-- Topic 1: Images -->
+        <section id="topic-image" class="tab-panel active-panel">
+            <div class="topic-title">
+                <h1>Image Creation Task Submissions</h1>
             </div>
-            <div class="topic-card">
-                <img src="images/snowflake.png" alt="A grey snowflake">
-                <h2 class="topic-card-text">A snowflake design</h2>
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <img src="images/planet.jpg" alt="Picture of a solar system">
+                    <h2 class="topic-card-text">A made up solar system</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/snowflake.png" alt="A grey snowflake">
+                    <h2 class="topic-card-text">A snowflake design</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/drawing.png" alt="Kageyama!">
+                    <h2 class="topic-card-text">An anime character</h2>
+                </div>
             </div>
-            <div class="topic-card">
-                <img src="images/drawing.png" alt="Kageyama!">
-                <h2 class="topic-card-text">An anime character</h2>
-            </div>
-        </div>
-    </section>
-<!-- End of topic one------------------------------------------------------------------------------------------ -->
+        </section>
 
-<!-- Topic two ------------------------------------------------------------------------------------------------- -->
-    <!-- The Second Topic Section -->
-    <section id="topic-cs" class="topic hidden">
-        <!-- the topic title a big bar with text in it -->
-        <div class="topic-title">
-            <h1>Computer Science</h1>
-        </div>
-        
-        <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/Y10 CS_ 1.6 Binary & Hex - PaintByNumbers_Dragon_wHexcodes.png" alt="A paint by number dragon using Hexadecimal colour codes">
-                <h2 class="topic-card-text">A dragon painted with Hexadecimal colours</h2>
+        <!-- Topic 2: Computer Science -->
+        <section id="topic-cs" class="tab-panel">
+            <div class="topic-title">
+                <h1>Computer Science</h1>
             </div>
-            <div class="topic-card">
-                <a href="https://flippybitandtheattackofthehexadecimalsfrombase16.com/" target="_blank"><img src="images/flippy.PNG" alt="Flippy bit link"></a>
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <img src="images/Y10 CS_ 1.6 Binary & Hex - PaintByNumbers_Dragon_wHexcodes.png" alt="A paint by number dragon using Hexadecimal colour codes">
+                    <h2 class="topic-card-text">A dragon painted with Hexadecimal colours</h2>
+                </div>
+                <div class="topic-card">
+                    <a href="https://flippybitandtheattackofthehexadecimalsfrombase16.com" target="_blank">
+                        <img src="images/flippy.PNG" alt="Flippy bit link">
+                    </a>
                     <h2 class="topic-card-text">The flippy bit game</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/grok.png" alt="1000 points in CodeWOF">
+                    <h2 class="topic-card-text">My progress on CodeWOF programming</h2>
+                </div>
             </div>
-            <div class="topic-card">
-                <img src="images/grok.png" alt="1000 points in CodeWOF">
-                <h2 class="topic-card-text">My progress on CodeWOF programming</h2>
-            </div>
-        </div>
-    </section>
-<!-- End of topic two------------------------------------------------------------------------------------------ -->
+        </section>
 
-<!-- Topic three ------------------------------------------------------------------------------------------------- -->
-    <!-- The Third Topic Section -->
-    <section id="topic-3d" class="topic hidden">
-        <!-- the topic title a big bar with text in it -->
-        <div class="topic-title">
-            <h1>3D modelling</h1>
-        </div>
+        <!-- Topic 3: 3D Modelling -->
+        <section id="topic-3d" class="tab-panel">
+            <div class="topic-title">
+                <h1>3D modelling</h1>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <img src="images/planet gearbox.png" alt="A functioning planetary gearbox in Onshape">
+                    <h2 class="topic-card-text">A functioning planetary gearbox in Onshape</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/matau.png" alt="A 3D model of a Maori artefact Matau">
+                    <h2 class="topic-card-text">A 3D model of a Maori artefact Matau</h2>
+                </div>
+                <div class="topic-card">
+                    <img src="images/plane.png" alt="A prototype plane design in Onshape">
+                    <h2 class="topic-card-text">A prototype plane design in Onshape</h2>
+                </div>
+            </div>
+        </section>
         
-        <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/planet gearbox.png" alt="A functioning planetary gearbox in Onshape">
-                <h2 class="topic-card-text">A functioning planetary gearbox in Onshape</h2>
-            </div>
-            <div class="topic-card">
-                <img src="images/matau.png" alt="A 3D model of a Maori artefact Matau">
-                <h2 class="topic-card-text">A 3D model of a Maori artefact Matau</h2>
-            </div>
-            <div class="topic-card">
-                <img src="images/plane.png" alt="A prototype plane design in Onshape">
-                <h2 class="topic-card-text">A prototype plane design in Onshape</h2>
-            </div>
-        </div>
-    </section>
-<!-- End of topic three------------------------------------------------------------------------------------------ -->
+    </main>
 
-    <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
+    <!-- Website Footer -->
     <footer class="footer">
         <p>&copy; 2026 My Showcase Website By Kean Tran 26691</p>
     </footer>
 
-    <!-- Tab Switching JavaScript Logic -->
+    <!-- Tab Switch Logic -->
     <script>
-        function showTopic(topicId) {
-            // Hide all topics
-            const topics = document.querySelectorAll('.topic');
-            topics.forEach(topic => topic.classList.add('hidden'));
+        function switchTab(event, tabId) {
+            // Hide all tab content panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.remove('active-panel'));
 
-            // Show the selected topic
-            document.getElementById(topicId).classList.remove('hidden');
-
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.menu-btn');
+            // Remove active state from all tab buttons
+            const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Add active class to the clicked button
-            event.target.classList.add('active');
+            // Show the current clicked tab panel and mark button as active
+            document.getElementById(tabId).classList.add('active-panel');
+            event.currentTarget.classList.add('active');
         }
     </script>
-
-<!-- The end of the whole page- no more content after this! -->
 </body>
 </html>
