@@ -15,9 +15,16 @@
         <div class="hero-text">Kean's DGT Portfolio</div>
     </section>
 
+    <!-- Navigation Menu Bar --------------------------------------------------------------------------------- -->
+    <div class="menu-bar">
+        <button class="menu-btn active" onclick="showTopic('topic-image')">Images</button>
+        <button class="menu-btn" onclick="showTopic('topic-cs')">Computer Science</button>
+        <button class="menu-btn" onclick="showTopic('topic-3d')">3D Modelling</button>
+    </div>
+
 <!-- Topic one ------------------------------------------------------------------------------------------------- -->
     <!-- The First Topic Section -->
-    <section class="topic">
+    <section id="topic-image" class="topic">
         <!-- the topic title a big bar with text in it -->
         <div class="topic-title">
             <h1>Image Creation Task Submissions</h1>
@@ -41,11 +48,9 @@
     </section>
 <!-- End of topic one------------------------------------------------------------------------------------------ -->
 
-<!-- Copy and paste the section from above to make your next section -->
-
 <!-- Topic two ------------------------------------------------------------------------------------------------- -->
     <!-- The Second Topic Section -->
-    <section class="topic">
+    <section id="topic-cs" class="topic hidden">
         <!-- the topic title a big bar with text in it -->
         <div class="topic-title">
             <h1>Computer Science</h1>
@@ -70,8 +75,8 @@
 <!-- End of topic two------------------------------------------------------------------------------------------ -->
 
 <!-- Topic three ------------------------------------------------------------------------------------------------- -->
-    <!-- The Second Topic Section -->
-    <section class="topic">
+    <!-- The Third Topic Section -->
+    <section id="topic-3d" class="topic hidden">
         <!-- the topic title a big bar with text in it -->
         <div class="topic-title">
             <h1>3D modelling</h1>
@@ -99,6 +104,25 @@
     <footer class="footer">
         <p>&copy; 2026 My Showcase Website By Kean Tran 26691</p>
     </footer>
+
+    <!-- Tab Switching JavaScript Logic -->
+    <script>
+        function showTopic(topicId) {
+            // Hide all topics
+            const topics = document.querySelectorAll('.topic');
+            topics.forEach(topic => topic.classList.add('hidden'));
+
+            // Show the selected topic
+            document.getElementById(topicId).classList.remove('hidden');
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.menu-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to the clicked button
+            event.target.classList.add('active');
+        }
+    </script>
 
 <!-- The end of the whole page- no more content after this! -->
 </body>
