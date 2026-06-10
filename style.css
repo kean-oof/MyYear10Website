@@ -145,3 +145,8 @@ img {
     font-family: 'Times New Roman', Times, serif;
     padding: 2em 3em;
 }
+
+.topic-card a {
+    display: block;
+    width: 100%;
+}
